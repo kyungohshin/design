@@ -16,7 +16,7 @@ package factoryMethod;
 public class Client {
 
 	public static void main(String args[]) {
-		ComputerFactory computerFactory = new ComputerFactory();
-		computerFactory.createComputer("LG");
+		Creator creator = new LGCreator();
+		creator.anOperation();
 	}
 }

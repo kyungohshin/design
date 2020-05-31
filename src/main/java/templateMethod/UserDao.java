@@ -30,7 +30,7 @@ public class UserDao {
 	@Autowired
 	DataSource dataSource;
 
-	// abstract protected PreparedStatement makeStatement(Connection c) throws SQLException;
+	// protected abstract PreparedStatement makeStatement(Connection c) throws SQLException;
 
 	public void delete() throws SQLException {
 		Connection c = null;
