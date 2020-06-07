@@ -10,8 +10,9 @@ package state;
 public class On implements PowerState {
 
 	@Override
-	public void powerPush() {
+	public void powerPush(Laptop lap) {
 		System.out.println("절전 모드");
+//		lap.setPowerState(powerState);
 	}
 
 }

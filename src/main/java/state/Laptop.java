@@ -16,43 +16,43 @@ package state;
  *
  *          참조 https://victorydntmd.tistory.com/294
  */
-public class Laptop {
-	public static String ON = "on";
-	public static String OFF = "off";
-	// public static String SAVE = "save";
-	private String powerState = "";
-
-	public Laptop() {
-		setPowerState(Laptop.OFF);
-	}
-
-	public void setPowerState(String powerState) {
-		this.powerState = powerState;
-	}
-
-	public void powerPush() {
-		if ("on".equals(this.powerState)) {
-			System.out.println("전원 off");
-			// } else if ("save".equals(this.powerState)) {
-
-		} else {
-			System.out.println("전원 on");
-		}
-	}
-}
-
 //public class Laptop {
-//	private PowerState powerState;
+//	public static String ON = "on";
+//	public static String OFF = "off";
+//	// public static String SAVE = "save";
+//	private String powerState = "";
 //
 //	public Laptop() {
-//		setPowerState(new Off());
+//		setPowerState(Laptop.OFF);
 //	}
 //
-//	public void setPowerState(PowerState powerState) {
+//	public void setPowerState(String powerState) {
 //		this.powerState = powerState;
 //	}
 //
 //	public void powerPush() {
-//		powerState.powerPush();
+//		if ("on".equals(this.powerState)) {
+//			System.out.println("전원 off");
+//			// } else if ("save".equals(this.powerState)) {
+//
+//		} else {
+//			System.out.println("전원 on");
+//		}
 //	}
 //}
+
+public class Laptop {
+	private PowerState powerState;
+
+	public Laptop() {
+		setPowerState(new Off());
+	}
+
+	public void setPowerState(PowerState powerState) {
+		this.powerState = powerState;
+	}
+
+	public void powerPush() {
+		powerState.powerPush(this);
+	}
+}

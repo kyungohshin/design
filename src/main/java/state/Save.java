@@ -10,7 +10,7 @@ package state;
 public class Save implements PowerState {
 
 	@Override
-	public void powerPush() {
+	public void powerPush(Laptop lap) {
 		System.out.println("전원 off");
 	}
 

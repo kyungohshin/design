@@ -16,7 +16,7 @@ public class Client {
 
 		laptop.powerPush();
 		System.out.println("===============");
-		laptop.setPowerState(Laptop.ON);
+		// laptop.setPowerState(Laptop.ON);
 		laptop.powerPush();
 //		laptop.setPowerState(save);
 //		laptop.powerPush();
