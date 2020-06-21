@@ -1,0 +1,29 @@
+package command;
+
+/**
+ *
+ *
+ * @author USER
+ * @history
+ *          2020. 6. 21. initial creation
+ */
+public class StereoOnCommand implements Command {
+
+	Stereo stereo;
+
+	public StereoOnCommand(Stereo stereo) {
+		this.stereo = stereo;
+	}
+
+	@Override
+	public void execute() {
+		stereo.on();
+		stereo.setCD();
+		stereo.setVolume(11);
+	}
+
+	@Override
+	public void undo() {
+		stereo.off();
+	}
+}
